@@ -766,7 +766,7 @@
     </div>
     <!-- Start Main leftbar navigation -->
     <div id="left-sidebar" class="sidebar">
-        <h5 class="brand-name">Ericsson<a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
+        <h5 class="brand-name">实验器材管理系统<a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
         <ul class="nav nav-tabs">
             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu-uni">University</a></li>
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu-admin">Admin</a></li>
@@ -779,7 +779,7 @@
                         <li><a href="professors.html"><i class="fa fa-black-tie"></i><span>Professors</span></a></li>
                         <li><a href="staff.html"><i class="fa fa-user-circle-o"></i><span>Staff</span></a></li>
                         <li><a href="students.html"><i class="fa fa-users"></i><span>Students</span></a></li>
-                        <li class="active"><a href="departments.html"><i class="fa fa-users"></i><span>Departments</span></a></li>
+                        <li class="active"><a href="departments.html"><i class="fa fa-users"></i><span>库存</span></a></li>
                         <li><a href="courses.html"><i class="fa fa-graduation-cap"></i><span>Courses</span></a></li>                        
                         <li><a href="library.html"><i class="fa fa-book"></i><span>Library</span></a></li>
                         <li><a href="holiday.html"><i class="fa fa-bullhorn"></i><span>Holiday</span></a></li>
@@ -819,7 +819,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="What you want to find">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button">Search</button>
+                                <button class="btn btn-outline-secondary" type="button">搜索</button>
                             </div>
                         </div>
                     </div>
@@ -836,12 +836,12 @@
                                     <a class="dropdown-item" href="page-pricing.html">Pricing</a>
                                 </div>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Auth</a>
+                           <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">用户</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="login.html">Login</a>
-                                    <a class="dropdown-item" href="register.html">Register</a>
-                                    <a class="dropdown-item" href="forgot-password.html">Forgot password</a>
+                                    <a class="dropdown-item" href="login.html">登录</a>
+                                    <a class="dropdown-item" href="register.html">注册</a>
+                                    <a class="dropdown-item" href="forgot-password.html">忘记密码</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="404.html">404 error</a>
                                     <a class="dropdown-item" href="500.html">500 error</a>
@@ -976,16 +976,16 @@
             <div class="container-fluid">
                 <div class="d-flex justify-content-between align-items-center ">
                     <div class="header-action">
-                        <h1 class="page-title">Departments</h1>
+                        <h1 class="page-title">库存</h1>
                         <ol class="breadcrumb page-breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Ericsson</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Departments</li>
+                            <li class="breadcrumb-item"><a href="#">实验器材管理</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">库存</li>
                         </ol>
                     </div>
                     <ul class="nav nav-tabs page-header-tab">
-                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Dep-all">List View</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Dep-add">Add</a></li>
-                        <li class="nav-item"><a class="nav-link" id="Dep-tab-Boot" data-toggle="tab" href="#Dep-add-Boot">Add Bootstrap Style</a></li>
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Dep-all">库存列表</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Dep-add">添加库存</a></li>
+                        <li class="nav-item"><a class="nav-link" id="Dep-tab-Boot" data-toggle="tab" href="#Dep-add-Boot">修改库存数据</a></li>
                     </ul>
                 </div>
             </div>
@@ -999,14 +999,12 @@
                                 <table class="table table-hover table-striped table-vcenter text-nowrap mb-0">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
-                                            <th>Dept. Name</th>
-                                            <th>Head OF Dept.</th>
-                                            <th>Phone</th>
-                                            <th>Email</th>
-                                            <th>establish</th>
-                                            <th>Std. Capacity</th>
-                                            <th>Edit</th>
+                                            <th>id</th>
+                                            <th>器材名</th>
+                                            <th>数量</th>
+                                            <th>存放地点</th>
+                                           <th>备注</th>
+                                            <th>编辑</th> 
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -1015,71 +1013,71 @@
                                             <td>Mechanical Engg.</td>
                                             <td>Emmett L Johnson</td>
                                             <td>+123 4567890</td>
-                                            <td>test@example.com</td>
-                                            <td>1998</td>
-                                            <td>150</td>
+                                           <td>test@example.com</td>
+                                         <!--   <td>1998</td>
+                                         <td>150</td> -->
                                             <td>
                                                 <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
                                                 <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Computer Engg.</td>
-                                            <td>Corrine M Johnson</td>
-                                            <td>+123 4567890</td>
-                                            <td>test@example.com</td>
-                                            <td>2011</td>
-                                            <td>205</td>
-                                            <td>
-                                                <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>M.B.A.</td>
-                                            <td>Gladys J Smith</td>
-                                            <td>+123 4567890</td>
-                                            <td>test@example.com</td>
-                                            <td>2009</td>
-                                            <td>128</td>
-                                            <td>
-                                                <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>M.C.A.</td>
-                                            <td>Patricia Smith</td>
-                                            <td>+123 4567890</td>
-                                            <td>test@example.com</td>
-                                            <td>2014</td>
-                                            <td>98</td>
-                                            <td>
-                                                <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Civil Engg.</td>
-                                            <td>Danny M Johnson</td>
-                                            <td>+123 4567890</td>
-                                            <td>test@example.com</td>
-                                            <td>2016</td>
-                                            <td>231</td>
-                                            <td>
-                                                <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                            </td>
-                                        </tr>
+                                      <!--   <tr>
+                                          <td>2</td>
+                                          <td>Computer Engg.</td>
+                                          <td>Corrine M Johnson</td>
+                                          <td>+123 4567890</td>
+                                         <td>test@example.com</td>
+                                         <td>2011</td>
+                                         <td>205</td>
+                                          <td>
+                                              <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                              <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                              <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>3</td>
+                                          <td>M.B.A.</td>
+                                          <td>Gladys J Smith</td>
+                                          <td>+123 4567890</td>
+                                          <td>test@example.com</td>
+                                          <td>2009</td>
+                                          <td>128</td>
+                                          <td>
+                                              <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                              <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                              <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>4</td>
+                                          <td>M.C.A.</td>
+                                          <td>Patricia Smith</td>
+                                          <td>+123 4567890</td>
+                                          <td>test@example.com</td>
+                                          <td>2014</td>
+                                          <td>98</td>
+                                          <td>
+                                              <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                              <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                              <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                          </td>
+                                      </tr>
+                                      <tr>
+                                          <td>5</td>
+                                          <td>Civil Engg.</td>
+                                          <td>Danny M Johnson</td>
+                                          <td>+123 4567890</td>
+                                          <td>test@example.com</td>
+                                          <td>2016</td>
+                                          <td>231</td>
+                                          <td>
+                                              <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                              <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                              <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                          </td>
+                                      </tr> -->
                                     </tbody>
                                 </table>
                             </div>        
@@ -1089,7 +1087,7 @@
                         <div class="col-lg-12 col-md-12">                
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Department Basic Info</h3>
+                                    <h3 class="card-title">添加库存</h3>
                                     <div class="card-options ">
                                         <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                                         <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
@@ -1099,27 +1097,33 @@
                                     <div class="row clearfix">
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Department Name ">
+                                                <select class="form-control input-height" name="sub">
+                                            <option value="">选择器材.</option>
+                                            <option value="Category 1">Mathematics</option>
+                                            <option value="Category 2">Science</option>
+                                            <option value="Category 3">Software</option>
+                                            <option value="Category 3">Other</option>
+                                        </select>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Head of Department">
+                                                <input type="text" class="form-control" placeholder="地点">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input type="number" class="form-control" placeholder="No. of Students ">
+                                                <input type="number" class="form-control" placeholder="数量 ">
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="Department Start Date">
+                                                <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="入库时间">
                                             </div>
                                         </div>
                                         <div class="col-sm-12">
                                             <div class="form-group">
-                                                <textarea rows="4" class="form-control no-resize" placeholder="Brief"></textarea>
+                                                <textarea rows="4" class="form-control no-resize" placeholder="备份"></textarea>
                                             </div>
                                         </div>
                                         <div class="col-sm-12">
@@ -1131,29 +1135,29 @@
                             </div>
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Staff Member Account Info</h3>
+                                    <!-- <h3 class="card-title">Staff Member Account Info</h3>
                                     <div class="card-options ">
                                         <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                                         <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="card-body">
-                                    <div class="row clearfix">
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Email">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Phone">
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
-                                            <button type="submit" class="btn btn-outline-secondary btn-default">Cancel</button>
-                                        </div>
-                                    </div>                        
+                                   <!--  <div class="row clearfix">
+                                                              <div class="col-sm-12">
+                                                                  <div class="form-group">
+                                                                      <input type="text" class="form-control" placeholder="Email">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-sm-12">
+                                                                  <div class="form-group">
+                                                                      <input type="text" class="form-control" placeholder="Phone">
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-sm-12">
+                                                                  <button type="submit" class="btn btn-primary">Submit</button>
+                                                                  <button type="submit" class="btn btn-outline-secondary btn-default">Cancel</button>
+                                                              </div>
+                                                          </div>  -->                       
                                 </div>
                             </div>
                         </div>
@@ -1161,7 +1165,7 @@
                     <div class="tab-pane" id="Dep-add-Boot">
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Add Department</h3>
+                                <h3 class="card-title">修改库存数据</h3>
                                 <div class="card-options ">
                                     <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
                                     <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
@@ -1169,40 +1173,46 @@
                             </div>
                             <form class="card-body">
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Department Name <span class="text-danger">*</span></label>
+                                    <label class="col-md-3 col-form-label">器材名<span class="text-danger">*</span></label>
+                                    <div class="col-md-7">
+                                        <select class="form-control input-height" name="sub">
+                                            <option value="">选择器材.</option>
+                                            <option value="Category 1">Mathematics</option>
+                                            <option value="Category 2">Science</option>
+                                            <option value="Category 3">Software</option>
+                                            <option value="Category 3">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label">存放地点</label>
                                     <div class="col-md-7">
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Head Of Department</label>
-                                    <div class="col-md-7">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Department Start Date <span class="text-danger">*</span></label>
+                                    <label class="col-md-3 col-form-label">修改时间 <span class="text-danger">*</span></label>
                                     <div class="col-md-7">
                                         <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Student Capacity <span class="text-danger">*</span></label>
+                                    <label class="col-md-3 col-form-label">数量 <span class="text-danger">*</span></label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control">
+                                        <input type="number" class="form-control" placeholder="数量 ">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Department Details <span class="text-danger">*</span></label>
+                                    <label class="col-md-3 col-form-label">备注 <span class="text-danger">*</span></label>
                                     <div class="col-md-7">
-                                        <textarea rows="4" class="form-control no-resize" placeholder="Please type what you want..."></textarea>
+                                        <textarea rows="4" class="form-control no-resize" placeholder="备注"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-md-3 col-form-label"></label>
                                     <div class="col-md-7">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                        <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                                        <button type="submit" class="btn btn-primary">提交</button>
+                                        <button type="submit" class="btn btn-outline-secondary">取消</button>
                                     </div>
                                 </div>
                             </form>
