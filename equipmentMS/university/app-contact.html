@@ -983,8 +983,10 @@
                         </ol>
                     </div>
                     <ul class="nav nav-tabs page-header-tab">
-                        <li class="nav-item"><a class="nav-link active" id="list-tab" data-toggle="tab" href="#list"><i class="fa fa-list-ul"></i> 入库日志</a></li>
-                        <li class="nav-item"><a class="nav-link" id="grid-tab" data-toggle="tab" href="#grid"><i class="fa fa-th"></i> 出库日志</a></li>
+                        <li class="nav-item"><a class="nav-link active" id="list-tab" data-toggle="tab" href="#list"><i class="fa fa-list-ul"></i> 出
+                    库日志</a></li>
+                        <li class="nav-item"><a class="nav-link" id="grid-tab" data-toggle="tab" href="#grid"><i class="fa fa-th"></i> 入
+                    库日志</a></li>
                         <li class="nav-item"><a class="nav-link" id="addnew-tab" data-toggle="tab" href="#addnew"><i class="fa fa-plus"></i> 修改日志</a></li>
                     </ul>
                 </div>
@@ -995,7 +997,186 @@
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="list" role="tabpanel">
                         <div class="table-responsive" id="users">
-                            <table class="table table-hover table-vcenter text-nowrap table_custom list">
+                                <div class="tab-pane active" id="Student-all">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="记录编号">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="出库人">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="器材名称">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                                    <div class="input-group">
+                                                        <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="出库日期">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary btn-block" title="">搜索</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive card">
+                                        <table class="table table-hover table-vcenter table-striped mb-0 text-nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>记录编号</th>
+                                                    <th>出
+                                                库人</th>
+                                                    <th></th>
+                                                    <th>器材名称</th>
+                                                    <th>器材规格</th>
+                                                    <th>器材数量</th>
+                                                    <th>出
+                                                库日期</th>
+                                                    <th>备注</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>A25</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar1.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Ken Smith</span></td>
+                                                    <td>Science</td>
+                                                    <td>ken@gmail.com</td>
+                                                    <td>(417) 646-7483</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A26</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar2.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Gerald K Smith</span></td>
+                                                    <td>M.C.A.</td>
+                                                    <td>Gerald@gmail.com</td>
+                                                    <td>(154) 646-2486</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A25</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar3.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Ken Smith</span></td>
+                                                    <td>Mechanical</td>
+                                                    <td>ken@gmail.com</td>
+                                                    <td>(417) 646-8377</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A27</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar4.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Alice A Smith</span></td>
+                                                    <td>M.B.B.S.</td>
+                                                    <td>Patricia@gmail.com</td>
+                                                    <td>(753) 646-4931</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A17</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar5.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Ken Smith</span></td>
+                                                    <td>Arts</td>
+                                                    <td>ken@gmail.com</td>
+                                                    <td>(417) 646-7642</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A11</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar6.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Corrine M Johnson</span></td>
+                                                    <td>Mechanical</td>
+                                                    <td>Gladys@gmail.com</td>
+                                                    <td>(349) 646-8377</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A12</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar7.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Alan Johnson</span></td>
+                                                    <td>Music</td>
+                                                    <td>ken@gmail.com</td>
+                                                    <td>(648) 646-8523</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A23</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar8.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">John Smith</span></td>
+                                                    <td>Civil</td>
+                                                    <td>Corrine@gmail.com</td>
+                                                    <td>(417) 646-7845</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            <!-- <table class="table table-hover table-vcenter text-nowrap table_custom list">
                                 <tbody>
                                     <tr class="">
                                         <td class="width35 hidden-xs">
@@ -1198,11 +1379,188 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
                         </div>
                     </div>
                     <div class="tab-pane fade" id="grid" role="tabpanel">
-                         <table class="table table-hover table-vcenter text-nowrap table_custom list">
+                          <div class="tab-pane active" id="Student-all">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="记录编号">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="入库人">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                                    <div class="input-group">
+                                                        <input type="text" class="form-control" placeholder="器材名称">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                                    <div class="input-group">
+                                                        <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="入库日期">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-2 col-md-4 col-sm-6">
+                                                    <a href="javascript:void(0);" class="btn btn-sm btn-primary btn-block" title="">搜索</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-responsive card">
+                                        <table class="table table-hover table-vcenter table-striped mb-0 text-nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>记录编号</th>
+                                                    <th>入库人</th>
+                                                    <th></th>
+                                                    <th>器材名称</th>
+                                                    <th>器材规格</th>
+                                                    <th>器材数量</th>
+                                                    <th>入库日期</th>
+                                                    <th>备注</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>A25</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar1.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Ken Smith</span></td>
+                                                    <td>Science</td>
+                                                    <td>ken@gmail.com</td>
+                                                    <td>(417) 646-7483</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A26</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar2.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Gerald K Smith</span></td>
+                                                    <td>M.C.A.</td>
+                                                    <td>Gerald@gmail.com</td>
+                                                    <td>(154) 646-2486</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A25</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar3.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Ken Smith</span></td>
+                                                    <td>Mechanical</td>
+                                                    <td>ken@gmail.com</td>
+                                                    <td>(417) 646-8377</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A27</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar4.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Alice A Smith</span></td>
+                                                    <td>M.B.B.S.</td>
+                                                    <td>Patricia@gmail.com</td>
+                                                    <td>(753) 646-4931</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A17</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar5.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Ken Smith</span></td>
+                                                    <td>Arts</td>
+                                                    <td>ken@gmail.com</td>
+                                                    <td>(417) 646-7642</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A11</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar6.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Corrine M Johnson</span></td>
+                                                    <td>Mechanical</td>
+                                                    <td>Gladys@gmail.com</td>
+                                                    <td>(349) 646-8377</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A12</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar7.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">Alan Johnson</span></td>
+                                                    <td>Music</td>
+                                                    <td>ken@gmail.com</td>
+                                                    <td>(648) 646-8523</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A23</td>
+                                                    <td class="w60">
+                                                        <img class="avatar" src="../assets/images/xs/avatar8.jpg" alt="">
+                                                    </td>
+                                                    <td><span class="font-16">John Smith</span></td>
+                                                    <td>Civil</td>
+                                                    <td>Corrine@gmail.com</td>
+                                                    <td>(417) 646-7845</td>
+                                                    <td>04 Jan, 2019</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
+                                                        <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                         <!-- <table class="table table-hover table-vcenter text-nowrap table_custom list">
                                 <tbody>
                                     <tr class="">
                                         <td class="width35 hidden-xs">
@@ -1405,7 +1763,7 @@
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> -->
                         <!-- <div class="row row-deck">
                             <div class="col-xl-4 col-md-6 col-sm-12">
                                 <div class="card " >
