@@ -768,7 +768,7 @@
     </div>
     <!-- Start Main leftbar navigation -->
     <div id="left-sidebar" class="sidebar">
-        <h5 class="brand-name">Ericsson<a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
+        <h5 class="brand-name">器材管理系统<a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Grid & List Toggle"></i></a></h5>
         <ul class="nav nav-tabs">
             <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#menu-uni">University</a></li>
             <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu-admin">Admin</a></li>
@@ -781,10 +781,10 @@
                         <li><a href="professors.html"><i class="fa fa-black-tie"></i><span>Professors</span></a></li>
                         <li><a href="staff.html"><i class="fa fa-user-circle-o"></i><span>Staff</span></a></li>
                         <li><a href="students.html"><i class="fa fa-users"></i><span>Students</span></a></li>
-                        <li><a href="departments.html"><i class="fa fa-users"></i><span>Departments</span></a></li>
-                        <li><a href="courses.html"><i class="fa fa-graduation-cap"></i><span>Courses</span></a></li>                        
+                        <li><a href="departments.html"><i class="fa fa-users"></i><span>库存</span></a></li>
+                        <li><a href="courses.html"><i class="fa fa-graduation-cap"></i><span>课程管理</span></a></li>                        
                         <li><a href="library.html"><i class="fa fa-book"></i><span>Library</span></a></li>
-                        <li class="active"><a href="holiday.html"><i class="fa fa-bullhorn"></i><span>Holiday</span></a></li>
+                        <li class="active"><a href="holiday.html"><i class="fa fa-bullhorn"></i><span>器材预测</span></a></li>
                         <li class="g_heading">Extra</li>
                         <li><a href="events.html"><i class="fa fa-calendar"></i><span>Calender</span></a></li>
                         <li><a href="app-chat.html"><i class="fa fa-comments-o"></i><span>Chat App</span></a></li>
@@ -923,7 +923,7 @@
                                                 <span class="avatar avatar-blue"><i class="fa fa-check"></i></span>
                                             </div>
                                             <div class="feeds-body ml-3">
-                                                <p class="text-muted mb-0">Campaign <strong class="text-blue font-weight-bold">Holiday</strong> is nearly reach budget limit.</p>
+                                                <p class="text-muted mb-0">Campaign <strong class="text-blue font-weight-bold">器材预测</strong> is nearly reach budget limit.</p>
                                             </div>
                                         </li>
                                         <li>
@@ -978,15 +978,16 @@
             <div class="container-fluid">
                 <div class="d-flex justify-content-between align-items-center ">
                     <div class="header-action">
-                        <h1 class="page-title">Holiday</h1>
+                        <h1 class="page-title">器材预测</h1>
                         <ol class="breadcrumb page-breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Ericsson</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Holiday</li>
+                            <li class="breadcrumb-item"><a href="#">器材管理</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">器材预测</li>
                         </ol>
                     </div>
                     <ul class="nav nav-tabs page-header-tab">
-                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Holiday-Calendar">Calendar</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Holiday-all">List</a></li>
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Holiday-Calendar">器材预测
+</a></li>
+                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Holiday-all">所需器材清单</a></li>
                         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Holiday-add">Add</a></li>
                         <li class="nav-item"><a class="nav-link" id="Holiday-tab-Boot" data-toggle="tab" href="#Holiday-add-Boot">Add Bootstrap Style</a></li>
                     </ul>
@@ -998,9 +999,36 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="Holiday-Calendar">
                         <div class="card">
-                            <div class="card-body">
-                                <div id="calendar"></div>
+                           <!--  <div class="card-body">
+                               <div id="calendar"></div>
+                           </div> -->
+                            <div class="card-header">
+                                <h3 class="card-title">器材预测</h3>
+                                <div class="card-options ">
+                                    <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                                    <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
+                                </div>
                             </div>
+                                    <form class="card-body">
+                                
+                                
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label">输入预测时间 <span class="text-danger">*</span></label>
+                                    <div class="col-md-7">
+                                        <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                               
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-7">
+                                        <button type="submit" class="btn btn-primary">提交</button>
+                                        <button type="submit" class="btn btn-outline-secondary">取消</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                                
                         </div>
                     </div>
                     <div class="tab-pane" id="Holiday-all">
@@ -1011,10 +1039,11 @@
                                         <thead>
                                             <tr>
                                                 <th>#</th>
-                                                <th>Title</th>
-                                                <th>Subject</th>
-                                                <th>Department</th>
-                                                <th>Year</th>
+                                                <th>器材名</th>
+                                                <th>规格</th>
+                                                <th>单价</th>
+                                                <th>数量</th>
+                                                <th>总价</th>
                                                 <th>Status</th>
                                             </tr>
                                         </thead>
@@ -1025,144 +1054,14 @@
                                                 <td>Public Holiday</td>
                                                 <td>01 January 2019</td>
                                                 <td>03 January 2019</td>
+                                                <td>fds</td>
                                                 <td>
                                                     <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
                                                     <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
                                                     <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Memorial Day</td>
-                                                <td>Public Holiday</td>
-                                                <td>29 May 2019</td>
-                                                <td>29 May 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Christmas Day</td>
-                                                <td>Public Holiday</td>
-                                                <td>25 December 2019</td>
-                                                <td>03 January 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Annual Function</td>
-                                                <td>Holiday By Collage</td>
-                                                <td>01 March 2019</td>
-                                                <td>03 March 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>5</td>
-                                                <td>New Year's Day</td>
-                                                <td>Public Holiday</td>
-                                                <td>01 January 2019</td>
-                                                <td>03 January 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>6</td>
-                                                <td>Memorial Day</td>
-                                                <td>Public Holiday</td>
-                                                <td>29 May 2019</td>
-                                                <td>29 May 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>7</td>
-                                                <td>Christmas Day</td>
-                                                <td>Public Holiday</td>
-                                                <td>25 December 2019</td>
-                                                <td>03 January 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>8</td>
-                                                <td>Annual Function</td>
-                                                <td>Holiday By Collage</td>
-                                                <td>01 March 2019</td>
-                                                <td>03 March 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>9</td>
-                                                <td>New Year's Day</td>
-                                                <td>Public Holiday</td>
-                                                <td>01 January 2019</td>
-                                                <td>03 January 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>10</td>
-                                                <td>Memorial Day</td>
-                                                <td>Public Holiday</td>
-                                                <td>29 May 2019</td>
-                                                <td>29 May 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>11</td>
-                                                <td>Christmas Day</td>
-                                                <td>Public Holiday</td>
-                                                <td>25 December 2019</td>
-                                                <td>03 January 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>12</td>
-                                                <td>Annual Function</td>
-                                                <td>Holiday By Collage</td>
-                                                <td>01 March 2019</td>
-                                                <td>03 March 2019</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="View"><i class="fa fa-eye"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm" title="Edit"><i class="fa fa-edit"></i></button>
-                                                    <button type="button" class="btn btn-icon btn-sm js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o text-danger"></i></button>
-                                                </td>
-                                            </tr>
+                                           
                                         </tbody>
                                     </table>
                                 </div>
