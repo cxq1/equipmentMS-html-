@@ -994,6 +994,7 @@
                         <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Courses-all">课程列表</a></li>
                         <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Courses-add">添加开课计划</a></li>
                         <li class="nav-item"><a class="nav-link" id="Courses-tab-Boot" data-toggle="tab" href="#Courses-add-Boot">添加课程</a></li>
+                        <li class="nav-item"><a class="nav-link" id="fix-course-datail-tab" data-toggle="tab" href="#fix-course-datail-div">添加课程</a></li>
                     </ul>
                 </div>
             </div>
@@ -1271,7 +1272,13 @@
                                 <div class="row clearfix">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="课程">
+                                            <select class="form-control input-height" name="sub">
+                                            <option value="">选择课程.</option>
+                                            <option value="Category 1">Mathematics</option>
+                                            <option value="Category 2">Science</option>
+                                            <option value="Category 3">Software</option>
+                                            <option value="Category 3">Other</option>
+                                        </select>
                                         </div>
                                     </div>
                                     
@@ -1326,9 +1333,7 @@
                         </div> -->
                     </div>
                     <div class="tab-pane" id="Courses-add-Boot">
-                        <div class="card" style="
-    height: 352px;
-">
+                        <div class="card">
                             <div class="card-header">
                                 <h3 class="card-title">添加课程</h3>
                                 <div class="card-options ">
@@ -1360,6 +1365,60 @@
                             </form>
                         </div>
                     </div>
+                    
+                    <div class="tab-pane" id="fix-course-datail-div">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">修改课程详情</h3>
+                                <div class="card-options ">
+                                    <a href="#" class="card-options-collapse" data-toggle="card-collapse"><i class="fe fe-chevron-up"></i></a>
+                                    <a href="#" class="card-options-remove" data-toggle="card-remove"><i class="fe fe-x"></i></a>
+                                </div>
+                            </div>
+                            <form class="card-body">
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label">课程名<span class="text-danger">*</span></label>
+                                    <div class="col-md-7">
+                                        <select class="form-control input-height" name="sub">
+                                            <option value="">选择课程.</option>
+                                            <option value="Category 1">Mathematics</option>
+                                            <option value="Category 2">Science</option>
+                                            <option value="Category 3">Software</option>
+                                            <option value="Category 3">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label">课程编号</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label"> 开课人数</label>
+                                    <div class="col-md-7">
+                                        <input type="number" class="form-control" placeholder="开课人数 ">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label">开课时间</label>
+                                    <div class="col-md-7">
+                                       <input data-provide="datepicker" data-date-autoclose="true" class="form-control" placeholder="开课时间">
+                                    </div>
+                                </div>
+                               
+                               
+                                <div class="form-group row">
+                                    <label class="col-md-3 col-form-label"></label>
+                                    <div class="col-md-7">
+                                        <button type="submit" class="btn btn-primary">提交</button>
+                                        <button type="submit" class="btn btn-outline-secondary">取消</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
